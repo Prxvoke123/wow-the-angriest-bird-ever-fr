@@ -8,7 +8,7 @@ var box1, pig1,pig3;
 var platform;
 var bird, slingshot;
 var bgimg;
-
+var score=0
 var gameState = "onSling";
 
 function preload() {
@@ -50,18 +50,23 @@ function draw(){
   background(bgimg);
     }
   
-    
+    textSize(40)
+    fill('blue')
+    text('Score : '+score,900,50)
     Engine.update(engine);
     //strokeWeight(4);
     box1.display();
     box2.display();
     ground.display();
     pig1.display();
+    pig1.score()
+    
     log1.display();
 
     box3.display();
     box4.display();
     pig3.display();
+    pig3.score()
     log3.display();
 
     box5.display();
